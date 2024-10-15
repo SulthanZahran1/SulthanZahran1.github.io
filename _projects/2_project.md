@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 2
+title: GUI and Controller for 3D moving probe (used for sampling)
 description: a project with a background image and giscus comments
 img: assets/img/3.jpg
 importance: 2

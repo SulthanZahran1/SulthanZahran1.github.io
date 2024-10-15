@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Wafer Machine
+description: PLC and HMI for Wafer Machine
 img: assets/img/12.jpg
 importance: 1
 category: work
