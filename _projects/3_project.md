@@ -1,81 +1,21 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Spectroscopy GUI
+description: Enhancing Spectroscopic Analysis with a Custom MATLAB GUI at FAAN Lab
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+At FAAN Lab, we're passionate about pushing the boundaries of spectroscopic research. Recently, I had the opportunity to develop a sophisticated Graphical User Interface (GUI) for the Avantes Spectrometer, revolutionizing how we handle and interpret spectroscopic data in real-time.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Using MATLAB App Designer, I crafted an intuitive and user-friendly interface that not only simplifies interaction but also provides dynamic data visualization. This means researchers can now acquire and process spectroscopic data on the fly, adjusting parameters like integration time, averaging, and spectral range effortlessly.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+One of the standout features of this GUI is its advanced curve fitting capabilities. It automatically detects peaks, calculates Full Width at Half Maximum (FWHM), and determines maximum extinction levels. Additionally, the tool estimates band gaps through interactive Tauc plots, offering deeper insights into material properties.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+To ensure the highest quality of data analysis, I integrated several powerful filtering techniques, including Moving Average, Savitzky-Golay, and Fourier Transform filters. These can be customized to suit specific research needs, enhancing the precision and reliability of our results.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+But the innovation doesn't stop there. The application supports both real-time and historical data analysis, allowing users to generate interactive Tauc plots for band gap estimation, automate reference finding, and even playback historical data for comparative studies. This comprehensive approach not only streamlines the research process but also empowers scientists with robust tools to explore and interpret complex spectroscopic information.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Developing this MATLAB-based GUI has been a game-changer for FAAN Lab, enabling more efficient and accurate spectroscopic analysis. It's exciting to see how this tool is facilitating cutting-edge research and contributing to our understanding of material science.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

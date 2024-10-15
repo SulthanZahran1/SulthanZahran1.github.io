@@ -41,7 +41,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -51,7 +51,7 @@ navbar_fixed: true
 footer_fixed: true
 search_enabled: true
 socials_in_search: true
-bib_search: true
+bib_search: false
 
 # Dimensions
 max_width: 930px
@@ -108,7 +108,7 @@ whatsapp_number: +6281291616145 # your WhatsApp number (full phone number in int
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: # work page URL
-x_username: # your X handle
+x_username: chippedthorns # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 

@@ -1,81 +1,39 @@
 ---
 layout: page
-title: GUI and Controller for 3D moving probe (used for sampling)
-description: a project with a background image and giscus comments
+title: GUI and Controller for 3D moving probe
+description: Building a 2D Metal Surface Imaging Device
 img: assets/img/3.jpg
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+In the world of material science, understanding the intricate details of metal surfaces is crucial. Traditional methods like Scanning Capacitance Microscopy (SCM) offer detailed insights but often come with high costs and complexity. Enter my latest project: a cost-effective, 2D metal surface imaging device designed to generate detailed surface morphology maps without breaking the bank.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Project Overview
+The goal was simple yet ambitious—to design and build a 2D metal surface imaging device that rivals traditional SCM in detail and accuracy but is more accessible for various applications. By leveraging affordable components and innovative design, this device opens up new possibilities for researchers and enthusiasts alike.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Key Features
+1. High-Resolution Data Acquisition At the heart of the device is a 24-bit Analog-to-Digital Converter (ADC), ensuring precise and accurate data capture. This high-resolution data acquisition is essential for generating detailed surface morphology maps that can reveal even the slightest imperfections or features on a metal surface.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+2. Automated Scanning Automation is key to efficiency and consistency. The device uses T8 and T3 stepper motors to move the probe and sample in two dimensions. This automated scanning capability allows for seamless data acquisition, reducing manual intervention and minimizing errors.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+3. User-Friendly Interface Accessibility is a priority. I developed a graphical user interface (GUI) using Python and the Tkinter package, making it easy for users to control the device and visualize results. Whether you're a seasoned researcher or a hobbyist, the intuitive interface ensures a smooth user experience.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+4. Simulation and Validation One of the challenges faced was the absence of a working capacitance sensor. To overcome this, I designed a simulation based on the DAC MCP4725. This simulated environment allowed for comprehensive testing and validation of the data acquisition system, ensuring the device's reliability even without the physical sensor.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Technical Details
+The device employs stepper motors to control probe movement along the X, Y, and Z axes, enabling precise positioning for accurate data collection. An ADC ADS1232, paired with an Arduino Nano, measures voltage readings and transmits this data to a computer via serial communication. The Python-based GUI then processes the data and renders a 3D representation of the metal surface, with the Z-axis representing the measured ADC values. This real-time visualization provides immediate insights into the surface morphology, making analysis quicker and more efficient.
 
-{% raw %}
+Overcoming Challenges
+No project is without its hurdles. When the capacitance sensor couldn't be built due to unforeseen circumstances, I pivoted by designing a simulation using the DAC MCP4725. This workaround not only allowed the project to move forward but also provided valuable insights into the data acquisition process, ensuring the system's robustness and reliability.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+Future Enhancements
+While the current device is a significant achievement, there's always room for improvement. Future enhancements could include:
 
-{% endraw %}
+Integration of a Functional Capacitance Sensor: Bringing the physical sensor into the system will further enhance data accuracy and reliability.
+Mechanical Design Refinement: Improving the mechanical components for greater stability and precision will lead to even more detailed surface maps.
+Advanced Data Processing Techniques: Exploring alternative data processing methods could enhance image resolution and provide deeper insights into surface morphology.
+Conclusion
+This project is a testament to the power of innovative thinking and technical expertise. Designing, constructing, and validating a complex electro-mechanical system for 2D metal surface imaging showcased my ability to integrate various electronic components, microcontrollers, and programming languages to achieve a common goal. By providing a cost-effective alternative to traditional SCM, this device has the potential to make detailed metal surface analysis more accessible and widespread.
+
